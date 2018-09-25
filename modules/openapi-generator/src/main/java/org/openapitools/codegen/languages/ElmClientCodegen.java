@@ -132,6 +132,7 @@ public class ElmClientCodegen extends DefaultCodegen implements CodegenConfig {
 
         instantiationTypes.clear();
         instantiationTypes.put("array", "List");
+        instantiationTypes.put("map", "Dict");
 
         typeMapping.clear();
         typeMapping.put("integer", "Int");
@@ -142,12 +143,13 @@ public class ElmClientCodegen extends DefaultCodegen implements CodegenConfig {
         typeMapping.put("boolean", "Bool");
         typeMapping.put("string", "String");
         typeMapping.put("array", "List");
+        typeMapping.put("map", "Dict");
         typeMapping.put("date", "DateOnly");
         typeMapping.put("DateTime", "DateTime");
         typeMapping.put("password", "String");
-        typeMapping.put("file", "String");
         typeMapping.put("ByteArray", "Byte");
-        typeMapping.put("binary", "String");
+        typeMapping.put("file", "String");
+        typeMapping.put("binary", "String"); // binary is the `file` in OAS3
 
         importMapping.clear();
 
@@ -527,19 +529,26 @@ public class ElmClientCodegen extends DefaultCodegen implements CodegenConfig {
 
     private String paramToString(final CodegenParameter param) {
         final String paramName = param.paramName;
-        if (param.isString || param.isUuid) {
+
+        if (param.isString || param.isUuid) { // string
+            return paramName;
+        } else if (ElmVersion.ELM_018.equals(elmVersion)) { // Elm 0.18
+            return "toString " + paramName;
+        } else if (param.isInteger || param.isLong) { // int/long
+            return "String.fromInt " + paramName;
+        } else if (param.isFloat || param.isDouble) { // float/double
+            return "String.fromFloat " + paramName;
+        } else if (param.isBoolean) { // boolean
+            return "String.fromBool " + paramName;
+        } else if (param.isDateTime || param.isDate) { // datetime
+            return paramName;
+        } else if (param.isBinary) { // binary
+            return paramName;
+        } else if (param.isByteArray) { // byte array
             return paramName;
         }
-        if (ElmVersion.ELM_018.equals(elmVersion)) {
-            return "toString " + paramName;
-        }
-        if (param.isInteger || param.isLong) {
-            return "String.fromInt " + paramName;
-        }
-        if (param.isFloat || param.isDouble) {
-            return "String.fromFloat " + paramName;
-        }
-        throw new RuntimeException("Parameter '" + paramName + "' cannot be converted to a string");
+
+        throw new RuntimeException("Parameter '" + paramName + "' cannot be converted to a string. Please report the issue.");
     }
 
     @Override
