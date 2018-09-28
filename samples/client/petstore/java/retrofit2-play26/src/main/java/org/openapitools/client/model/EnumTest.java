@@ -56,9 +56,9 @@ public class EnumTest {
     }
 
     @JsonCreator
-    public static EnumStringEnum fromValue(String text) {
+    public static EnumStringEnum fromValue(String value) {
       for (EnumStringEnum b : EnumStringEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -67,7 +67,7 @@ public class EnumTest {
   }
 
   @JsonProperty("enum_string")
-  private EnumStringEnum enumString;
+  private EnumStringEnum enumString = null;
 
   /**
    * Gets or Sets enumStringRequired
@@ -96,9 +96,9 @@ public class EnumTest {
     }
 
     @JsonCreator
-    public static EnumStringRequiredEnum fromValue(String text) {
+    public static EnumStringRequiredEnum fromValue(String value) {
       for (EnumStringRequiredEnum b : EnumStringRequiredEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -107,7 +107,7 @@ public class EnumTest {
   }
 
   @JsonProperty("enum_string_required")
-  private EnumStringRequiredEnum enumStringRequired;
+  private EnumStringRequiredEnum enumStringRequired = null;
 
   /**
    * Gets or Sets enumInteger
@@ -134,9 +134,9 @@ public class EnumTest {
     }
 
     @JsonCreator
-    public static EnumIntegerEnum fromValue(String text) {
+    public static EnumIntegerEnum fromValue(Integer value) {
       for (EnumIntegerEnum b : EnumIntegerEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -145,7 +145,7 @@ public class EnumTest {
   }
 
   @JsonProperty("enum_integer")
-  private EnumIntegerEnum enumInteger;
+  private EnumIntegerEnum enumInteger = null;
 
   /**
    * Gets or Sets enumNumber
@@ -172,9 +172,9 @@ public class EnumTest {
     }
 
     @JsonCreator
-    public static EnumNumberEnum fromValue(String text) {
+    public static EnumNumberEnum fromValue(Double value) {
       for (EnumNumberEnum b : EnumNumberEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -183,7 +183,7 @@ public class EnumTest {
   }
 
   @JsonProperty("enum_number")
-  private EnumNumberEnum enumNumber;
+  private EnumNumberEnum enumNumber = null;
 
   @JsonProperty("outerEnum")
   private OuterEnum outerEnum = null;

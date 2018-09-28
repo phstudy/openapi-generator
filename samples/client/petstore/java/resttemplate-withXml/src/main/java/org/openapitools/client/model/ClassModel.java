@@ -35,7 +35,7 @@ public class ClassModel {
   @JsonProperty("_class")
   @JacksonXmlProperty(localName = "_class")
   @XmlElement(name = "_class")
-  private String propertyClass;
+  private String propertyClass = null;
 
   public ClassModel propertyClass(String propertyClass) {
     this.propertyClass = propertyClass;

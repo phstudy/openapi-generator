@@ -32,19 +32,19 @@ import java.io.IOException;
 public class Name {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
-  private Integer name;
+  private Integer name = null;
 
   public static final String SERIALIZED_NAME_SNAKE_CASE = "snake_case";
   @SerializedName(SERIALIZED_NAME_SNAKE_CASE)
-  private Integer snakeCase;
+  private Integer snakeCase = null;
 
   public static final String SERIALIZED_NAME_PROPERTY = "property";
   @SerializedName(SERIALIZED_NAME_PROPERTY)
-  private String property;
+  private String property = null;
 
   public static final String SERIALIZED_NAME_123NUMBER = "123Number";
   @SerializedName(SERIALIZED_NAME_123NUMBER)
-  private Integer _123number;
+  private Integer _123number = null;
 
   public Name name(Integer name) {
     this.name = name;

@@ -33,35 +33,35 @@ import android.os.Parcel;
 public class User implements Parcelable {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
-  private Long id;
+  private Long id = null;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
-  private String username;
+  private String username = null;
 
   public static final String SERIALIZED_NAME_FIRST_NAME = "firstName";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
-  private String firstName;
+  private String firstName = null;
 
   public static final String SERIALIZED_NAME_LAST_NAME = "lastName";
   @SerializedName(SERIALIZED_NAME_LAST_NAME)
-  private String lastName;
+  private String lastName = null;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
-  private String email;
+  private String email = null;
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
-  private String password;
+  private String password = null;
 
   public static final String SERIALIZED_NAME_PHONE = "phone";
   @SerializedName(SERIALIZED_NAME_PHONE)
-  private String phone;
+  private String phone = null;
 
   public static final String SERIALIZED_NAME_USER_STATUS = "userStatus";
   @SerializedName(SERIALIZED_NAME_USER_STATUS)
-  private Integer userStatus;
+  private Integer userStatus = null;
 
   public User() {
   }

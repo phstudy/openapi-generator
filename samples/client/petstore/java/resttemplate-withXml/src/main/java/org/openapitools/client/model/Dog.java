@@ -35,7 +35,7 @@ public class Dog extends Animal {
   @JsonProperty("breed")
   @JacksonXmlProperty(localName = "breed")
   @XmlElement(name = "breed")
-  private String breed;
+  private String breed = null;
 
   public Dog breed(String breed) {
     this.breed = breed;

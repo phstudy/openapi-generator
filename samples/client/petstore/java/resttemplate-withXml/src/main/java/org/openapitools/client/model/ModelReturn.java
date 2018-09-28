@@ -35,7 +35,7 @@ public class ModelReturn {
   @JsonProperty("return")
   @JacksonXmlProperty(localName = "return")
   @XmlElement(name = "return")
-  private Integer _return;
+  private Integer _return = null;
 
   public ModelReturn _return(Integer _return) {
     this._return = _return;

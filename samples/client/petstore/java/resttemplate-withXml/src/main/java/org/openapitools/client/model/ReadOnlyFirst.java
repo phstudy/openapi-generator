@@ -34,12 +34,12 @@ public class ReadOnlyFirst {
   @JsonProperty("bar")
   @JacksonXmlProperty(localName = "bar")
   @XmlElement(name = "bar")
-  private String bar;
+  private String bar = null;
 
   @JsonProperty("baz")
   @JacksonXmlProperty(localName = "baz")
   @XmlElement(name = "baz")
-  private String baz;
+  private String baz = null;
 
    /**
    * Get bar

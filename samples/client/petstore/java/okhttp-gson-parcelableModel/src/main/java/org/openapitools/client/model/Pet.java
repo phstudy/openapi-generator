@@ -37,7 +37,7 @@ import android.os.Parcel;
 public class Pet implements Parcelable {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
-  private Long id;
+  private Long id = null;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
@@ -45,7 +45,7 @@ public class Pet implements Parcelable {
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  private String name = null;
 
   public static final String SERIALIZED_NAME_PHOTO_URLS = "photoUrls";
   @SerializedName(SERIALIZED_NAME_PHOTO_URLS)
@@ -81,9 +81,9 @@ public class Pet implements Parcelable {
       return String.valueOf(value);
     }
 
-    public static StatusEnum fromValue(String text) {
+    public static StatusEnum fromValue(String value) {
       for (StatusEnum b : StatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -106,7 +106,7 @@ public class Pet implements Parcelable {
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
-  private StatusEnum status;
+  private StatusEnum status = null;
 
   public Pet() {
   }

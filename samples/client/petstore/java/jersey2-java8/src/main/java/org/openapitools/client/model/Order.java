@@ -28,16 +28,16 @@ import java.time.OffsetDateTime;
 
 public class Order {
   @JsonProperty("id")
-  private Long id;
+  private Long id = null;
 
   @JsonProperty("petId")
-  private Long petId;
+  private Long petId = null;
 
   @JsonProperty("quantity")
-  private Integer quantity;
+  private Integer quantity = null;
 
   @JsonProperty("shipDate")
-  private OffsetDateTime shipDate;
+  private OffsetDateTime shipDate = null;
 
   /**
    * Order Status
@@ -66,9 +66,9 @@ public class Order {
     }
 
     @JsonCreator
-    public static StatusEnum fromValue(String text) {
+    public static StatusEnum fromValue(String value) {
       for (StatusEnum b : StatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -77,7 +77,7 @@ public class Order {
   }
 
   @JsonProperty("status")
-  private StatusEnum status;
+  private StatusEnum status = null;
 
   @JsonProperty("complete")
   private Boolean complete = false;

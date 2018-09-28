@@ -32,19 +32,19 @@ import org.joda.time.DateTime;
 public class Order {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
-  private Long id;
+  private Long id = null;
 
   public static final String SERIALIZED_NAME_PET_ID = "petId";
   @SerializedName(SERIALIZED_NAME_PET_ID)
-  private Long petId;
+  private Long petId = null;
 
   public static final String SERIALIZED_NAME_QUANTITY = "quantity";
   @SerializedName(SERIALIZED_NAME_QUANTITY)
-  private Integer quantity;
+  private Integer quantity = null;
 
   public static final String SERIALIZED_NAME_SHIP_DATE = "shipDate";
   @SerializedName(SERIALIZED_NAME_SHIP_DATE)
-  private DateTime shipDate;
+  private DateTime shipDate = null;
 
   /**
    * Order Status
@@ -72,9 +72,9 @@ public class Order {
       return String.valueOf(value);
     }
 
-    public static StatusEnum fromValue(String text) {
+    public static StatusEnum fromValue(String value) {
       for (StatusEnum b : StatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -97,7 +97,7 @@ public class Order {
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
-  private StatusEnum status;
+  private StatusEnum status = null;
 
   public static final String SERIALIZED_NAME_COMPLETE = "complete";
   @SerializedName(SERIALIZED_NAME_COMPLETE)

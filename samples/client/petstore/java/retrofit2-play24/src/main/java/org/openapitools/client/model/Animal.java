@@ -37,7 +37,7 @@ import javax.validation.Valid;
 
 public class Animal {
   @JsonProperty("className")
-  private String className;
+  private String className = null;
 
   @JsonProperty("color")
   private String color = "red";

@@ -35,7 +35,7 @@ public class NumberOnly {
   @JsonProperty("JustNumber")
   @JacksonXmlProperty(localName = "JustNumber")
   @XmlElement(name = "JustNumber")
-  private BigDecimal justNumber;
+  private BigDecimal justNumber = null;
 
   public NumberOnly justNumber(BigDecimal justNumber) {
     this.justNumber = justNumber;

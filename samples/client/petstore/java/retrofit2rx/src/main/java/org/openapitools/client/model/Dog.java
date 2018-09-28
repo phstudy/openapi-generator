@@ -32,7 +32,7 @@ import org.openapitools.client.model.Animal;
 public class Dog extends Animal {
   public static final String SERIALIZED_NAME_BREED = "breed";
   @SerializedName(SERIALIZED_NAME_BREED)
-  private String breed;
+  private String breed = null;
 
   public Dog breed(String breed) {
     this.breed = breed;

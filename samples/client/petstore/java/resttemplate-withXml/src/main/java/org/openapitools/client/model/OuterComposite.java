@@ -35,17 +35,17 @@ public class OuterComposite {
   @JsonProperty("my_number")
   @JacksonXmlProperty(localName = "my_number")
   @XmlElement(name = "my_number")
-  private BigDecimal myNumber;
+  private BigDecimal myNumber = null;
 
   @JsonProperty("my_string")
   @JacksonXmlProperty(localName = "my_string")
   @XmlElement(name = "my_string")
-  private String myString;
+  private String myString = null;
 
   @JsonProperty("my_boolean")
   @JacksonXmlProperty(localName = "my_boolean")
   @XmlElement(name = "my_boolean")
-  private Boolean myBoolean;
+  private Boolean myBoolean = null;
 
   public OuterComposite myNumber(BigDecimal myNumber) {
     this.myNumber = myNumber;

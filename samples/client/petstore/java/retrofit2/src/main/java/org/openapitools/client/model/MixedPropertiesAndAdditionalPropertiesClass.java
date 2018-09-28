@@ -37,11 +37,11 @@ import org.threeten.bp.OffsetDateTime;
 public class MixedPropertiesAndAdditionalPropertiesClass {
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
-  private UUID uuid;
+  private UUID uuid = null;
 
   public static final String SERIALIZED_NAME_DATE_TIME = "dateTime";
   @SerializedName(SERIALIZED_NAME_DATE_TIME)
-  private OffsetDateTime dateTime;
+  private OffsetDateTime dateTime = null;
 
   public static final String SERIALIZED_NAME_MAP = "map";
   @SerializedName(SERIALIZED_NAME_MAP)

@@ -30,7 +30,7 @@ import javax.validation.Valid;
 
 public class ClassModel {
   @JsonProperty("_class")
-  private String propertyClass;
+  private String propertyClass = null;
 
   public ClassModel propertyClass(String propertyClass) {
     this.propertyClass = propertyClass;

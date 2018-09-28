@@ -36,55 +36,55 @@ import org.joda.time.LocalDate;
 public class FormatTest {
   public static final String SERIALIZED_NAME_INTEGER = "integer";
   @SerializedName(SERIALIZED_NAME_INTEGER)
-  private Integer integer;
+  private Integer integer = null;
 
   public static final String SERIALIZED_NAME_INT32 = "int32";
   @SerializedName(SERIALIZED_NAME_INT32)
-  private Integer int32;
+  private Integer int32 = null;
 
   public static final String SERIALIZED_NAME_INT64 = "int64";
   @SerializedName(SERIALIZED_NAME_INT64)
-  private Long int64;
+  private Long int64 = null;
 
   public static final String SERIALIZED_NAME_NUMBER = "number";
   @SerializedName(SERIALIZED_NAME_NUMBER)
-  private BigDecimal number;
+  private BigDecimal number = null;
 
   public static final String SERIALIZED_NAME_FLOAT = "float";
   @SerializedName(SERIALIZED_NAME_FLOAT)
-  private Float _float;
+  private Float _float = null;
 
   public static final String SERIALIZED_NAME_DOUBLE = "double";
   @SerializedName(SERIALIZED_NAME_DOUBLE)
-  private Double _double;
+  private Double _double = null;
 
   public static final String SERIALIZED_NAME_STRING = "string";
   @SerializedName(SERIALIZED_NAME_STRING)
-  private String string;
+  private String string = null;
 
   public static final String SERIALIZED_NAME_BYTE = "byte";
   @SerializedName(SERIALIZED_NAME_BYTE)
-  private byte[] _byte;
+  private byte[] _byte = null;
 
   public static final String SERIALIZED_NAME_BINARY = "binary";
   @SerializedName(SERIALIZED_NAME_BINARY)
-  private File binary;
+  private File binary = null;
 
   public static final String SERIALIZED_NAME_DATE = "date";
   @SerializedName(SERIALIZED_NAME_DATE)
-  private LocalDate date;
+  private LocalDate date = null;
 
   public static final String SERIALIZED_NAME_DATE_TIME = "dateTime";
   @SerializedName(SERIALIZED_NAME_DATE_TIME)
-  private DateTime dateTime;
+  private DateTime dateTime = null;
 
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
-  private UUID uuid;
+  private UUID uuid = null;
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
-  private String password;
+  private String password = null;
 
   public FormatTest integer(Integer integer) {
     this.integer = integer;

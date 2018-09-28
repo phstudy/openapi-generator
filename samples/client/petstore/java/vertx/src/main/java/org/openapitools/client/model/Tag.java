@@ -27,10 +27,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class Tag {
   @JsonProperty("id")
-  private Long id;
+  private Long id = null;
 
   @JsonProperty("name")
-  private String name;
+  private String name = null;
 
   public Tag id(Long id) {
     this.id = id;

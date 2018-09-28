@@ -34,11 +34,11 @@ import android.os.Parcel;
 public class Model200Response implements Parcelable {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
-  private Integer name;
+  private Integer name = null;
 
   public static final String SERIALIZED_NAME_PROPERTY_CLASS = "class";
   @SerializedName(SERIALIZED_NAME_PROPERTY_CLASS)
-  private String propertyClass;
+  private String propertyClass = null;
 
   public Model200Response() {
   }

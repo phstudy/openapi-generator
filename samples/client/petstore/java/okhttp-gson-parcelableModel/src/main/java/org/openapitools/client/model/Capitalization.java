@@ -33,27 +33,27 @@ import android.os.Parcel;
 public class Capitalization implements Parcelable {
   public static final String SERIALIZED_NAME_SMALL_CAMEL = "smallCamel";
   @SerializedName(SERIALIZED_NAME_SMALL_CAMEL)
-  private String smallCamel;
+  private String smallCamel = null;
 
   public static final String SERIALIZED_NAME_CAPITAL_CAMEL = "CapitalCamel";
   @SerializedName(SERIALIZED_NAME_CAPITAL_CAMEL)
-  private String capitalCamel;
+  private String capitalCamel = null;
 
   public static final String SERIALIZED_NAME_SMALL_SNAKE = "small_Snake";
   @SerializedName(SERIALIZED_NAME_SMALL_SNAKE)
-  private String smallSnake;
+  private String smallSnake = null;
 
   public static final String SERIALIZED_NAME_CAPITAL_SNAKE = "Capital_Snake";
   @SerializedName(SERIALIZED_NAME_CAPITAL_SNAKE)
-  private String capitalSnake;
+  private String capitalSnake = null;
 
   public static final String SERIALIZED_NAME_SC_A_E_T_H_FLOW_POINTS = "SCA_ETH_Flow_Points";
   @SerializedName(SERIALIZED_NAME_SC_A_E_T_H_FLOW_POINTS)
-  private String scAETHFlowPoints;
+  private String scAETHFlowPoints = null;
 
   public static final String SERIALIZED_NAME_A_T_T_N_A_M_E = "ATT_NAME";
   @SerializedName(SERIALIZED_NAME_A_T_T_N_A_M_E)
-  private String ATT_NAME;
+  private String ATT_NAME = null;
 
   public Capitalization() {
   }

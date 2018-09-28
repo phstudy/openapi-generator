@@ -58,9 +58,9 @@ public class EnumTest implements Parcelable {
       return String.valueOf(value);
     }
 
-    public static EnumStringEnum fromValue(String text) {
+    public static EnumStringEnum fromValue(String value) {
       for (EnumStringEnum b : EnumStringEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -83,7 +83,7 @@ public class EnumTest implements Parcelable {
 
   public static final String SERIALIZED_NAME_ENUM_STRING = "enum_string";
   @SerializedName(SERIALIZED_NAME_ENUM_STRING)
-  private EnumStringEnum enumString;
+  private EnumStringEnum enumString = null;
 
   /**
    * Gets or Sets enumStringRequired
@@ -111,9 +111,9 @@ public class EnumTest implements Parcelable {
       return String.valueOf(value);
     }
 
-    public static EnumStringRequiredEnum fromValue(String text) {
+    public static EnumStringRequiredEnum fromValue(String value) {
       for (EnumStringRequiredEnum b : EnumStringRequiredEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -136,7 +136,7 @@ public class EnumTest implements Parcelable {
 
   public static final String SERIALIZED_NAME_ENUM_STRING_REQUIRED = "enum_string_required";
   @SerializedName(SERIALIZED_NAME_ENUM_STRING_REQUIRED)
-  private EnumStringRequiredEnum enumStringRequired;
+  private EnumStringRequiredEnum enumStringRequired = null;
 
   /**
    * Gets or Sets enumInteger
@@ -162,9 +162,9 @@ public class EnumTest implements Parcelable {
       return String.valueOf(value);
     }
 
-    public static EnumIntegerEnum fromValue(String text) {
+    public static EnumIntegerEnum fromValue(Integer value) {
       for (EnumIntegerEnum b : EnumIntegerEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -187,7 +187,7 @@ public class EnumTest implements Parcelable {
 
   public static final String SERIALIZED_NAME_ENUM_INTEGER = "enum_integer";
   @SerializedName(SERIALIZED_NAME_ENUM_INTEGER)
-  private EnumIntegerEnum enumInteger;
+  private EnumIntegerEnum enumInteger = null;
 
   /**
    * Gets or Sets enumNumber
@@ -213,9 +213,9 @@ public class EnumTest implements Parcelable {
       return String.valueOf(value);
     }
 
-    public static EnumNumberEnum fromValue(String text) {
+    public static EnumNumberEnum fromValue(Double value) {
       for (EnumNumberEnum b : EnumNumberEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -238,7 +238,7 @@ public class EnumTest implements Parcelable {
 
   public static final String SERIALIZED_NAME_ENUM_NUMBER = "enum_number";
   @SerializedName(SERIALIZED_NAME_ENUM_NUMBER)
-  private EnumNumberEnum enumNumber;
+  private EnumNumberEnum enumNumber = null;
 
   public static final String SERIALIZED_NAME_OUTER_ENUM = "outerEnum";
   @SerializedName(SERIALIZED_NAME_OUTER_ENUM)

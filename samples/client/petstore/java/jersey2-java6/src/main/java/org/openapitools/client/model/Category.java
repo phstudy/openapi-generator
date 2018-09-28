@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class Category {
   @JsonProperty("id")
-  private Long id;
+  private Long id = null;
 
   @JsonProperty("name")
   private String name = "default-name";

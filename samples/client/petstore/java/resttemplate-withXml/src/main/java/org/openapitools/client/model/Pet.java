@@ -38,7 +38,7 @@ public class Pet {
   @JsonProperty("id")
   @JacksonXmlProperty(localName = "id")
   @XmlElement(name = "id")
-  private Long id;
+  private Long id = null;
 
   @JsonProperty("category")
   @JacksonXmlProperty(localName = "category")
@@ -48,7 +48,7 @@ public class Pet {
   @JsonProperty("name")
   @JacksonXmlProperty(localName = "name")
   @XmlElement(name = "name")
-  private String name;
+  private String name = null;
 
   @JsonProperty("photoUrls")
   // items.xmlName=
@@ -97,9 +97,9 @@ public class Pet {
     }
 
     @JsonCreator
-    public static StatusEnum fromValue(String text) {
+    public static StatusEnum fromValue(String value) {
       for (StatusEnum b : StatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (String.valueOf(b.value).equals(String.valueOf(value))) {
           return b;
         }
       }
@@ -110,7 +110,7 @@ public class Pet {
   @JsonProperty("status")
   @JacksonXmlProperty(localName = "status")
   @XmlElement(name = "status")
-  private StatusEnum status;
+  private StatusEnum status = null;
 
   public Pet id(Long id) {
     this.id = id;

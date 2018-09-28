@@ -34,12 +34,12 @@ public class Tag {
   @JsonProperty("id")
   @JacksonXmlProperty(localName = "id")
   @XmlElement(name = "id")
-  private Long id;
+  private Long id = null;
 
   @JsonProperty("name")
   @JacksonXmlProperty(localName = "name")
   @XmlElement(name = "name")
-  private String name;
+  private String name = null;
 
   public Tag id(Long id) {
     this.id = id;

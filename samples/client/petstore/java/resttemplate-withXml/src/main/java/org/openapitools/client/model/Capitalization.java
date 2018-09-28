@@ -34,32 +34,32 @@ public class Capitalization {
   @JsonProperty("smallCamel")
   @JacksonXmlProperty(localName = "smallCamel")
   @XmlElement(name = "smallCamel")
-  private String smallCamel;
+  private String smallCamel = null;
 
   @JsonProperty("CapitalCamel")
   @JacksonXmlProperty(localName = "CapitalCamel")
   @XmlElement(name = "CapitalCamel")
-  private String capitalCamel;
+  private String capitalCamel = null;
 
   @JsonProperty("small_Snake")
   @JacksonXmlProperty(localName = "small_Snake")
   @XmlElement(name = "small_Snake")
-  private String smallSnake;
+  private String smallSnake = null;
 
   @JsonProperty("Capital_Snake")
   @JacksonXmlProperty(localName = "Capital_Snake")
   @XmlElement(name = "Capital_Snake")
-  private String capitalSnake;
+  private String capitalSnake = null;
 
   @JsonProperty("SCA_ETH_Flow_Points")
   @JacksonXmlProperty(localName = "SCA_ETH_Flow_Points")
   @XmlElement(name = "SCA_ETH_Flow_Points")
-  private String scAETHFlowPoints;
+  private String scAETHFlowPoints = null;
 
   @JsonProperty("ATT_NAME")
   @JacksonXmlProperty(localName = "ATT_NAME")
   @XmlElement(name = "ATT_NAME")
-  private String ATT_NAME;
+  private String ATT_NAME = null;
 
   public Capitalization smallCamel(String smallCamel) {
     this.smallCamel = smallCamel;

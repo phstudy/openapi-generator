@@ -34,7 +34,7 @@ import android.os.Parcel;
 public class ModelReturn implements Parcelable {
   public static final String SERIALIZED_NAME_RETURN = "return";
   @SerializedName(SERIALIZED_NAME_RETURN)
-  private Integer _return;
+  private Integer _return = null;
 
   public ModelReturn() {
   }
